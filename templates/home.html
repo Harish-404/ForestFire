@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <div class ="login">
+            <h1>FWI Prediction</h1>
+
+            <!-- Main Input For Receving Quary to our ML -->
+           <from action="{{ url_for('preict_datapoint')}}" method="post">
+            <input type="text" name="Temperature" placeholder="Temperature" required="required"/><br>
+            <input type="text" name="RH" placeholder="RH" reuired="required" /><br>
+            <input type="text" name="Ws" placeholder="Ws" reuired="required" /><br>
+            <input type="text" name="Rain" placeholder="Rain" reuired="required" /><br>
+            <input type="text" name="FFMC" placeholder="FFMC" reuired="required" /><br>
+            <input type="text" name="DMC" placeholder="DMC" reuired="required" /><br>
+            <input type="text" name="ISI" placeholder="ISI" reuired="required" /><br>
+            <input type="text" name="Classes" placeholder="Classes" reuired="required" /><br>
+            <input type="text" name="region" placeholder="region" reuired="required" /><br>
+            
+
+
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+           </from>
+        <h2>
+            THE FWI Prediction is {{result}}
+           </h2>
+        </div>
+    </body>
+</html>
